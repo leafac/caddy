@@ -6,9 +6,9 @@ const download = require("download");
 (async () => {
   switch (process.argv[2]) {
     case "postinstall":
-      let version = require("./package.json").caddy;
-      if (version === undefined)
-        version = (
+      const version =
+        require("./package.json").caddy ??
+        (
           await got(
             "https://api.github.com/repos/caddyserver/caddy/releases/latest"
           ).json()
