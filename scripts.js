@@ -4,10 +4,11 @@ const got = require("got");
 const download = require("download");
 
 (async () => {
+  const project = path.resolve("../../../");
   switch (process.argv[2]) {
     case "postinstall":
       const version =
-        require("./package.json").caddy ??
+        require(path.join(project, "package.json")).caddy ??
         (
           await got(
             "https://api.github.com/repos/caddyserver/caddy/releases/latest"
@@ -22,7 +23,7 @@ const download = require("download");
             ? `v${process.config.variables.arm_version}`
             : ""
         }.${process.platform === "win32" ? ".zip" : "tar.gz"}`,
-        "node_modules/.bin/",
+        path.join(project, "node_modules/.bin/"),
         {
           extract: true,
           filter: (file) => file.path.includes("caddy"),
@@ -31,7 +32,7 @@ const download = require("download");
       break;
 
     case "preuninstall":
-      await fs.unlink("node_modules/.bin/caddy");
+      await fs.unlink(path.join(project, "node_modules/.bin/caddy"));
       break;
   }
 })();
