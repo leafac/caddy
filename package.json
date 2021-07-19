@@ -17,8 +17,7 @@
   },
   "scripts": {
     "postinstall": "node scripts.js postinstall",
-    "preuninstall": "node scripts.js preuninstall",
-    "test": "caddy version"
+    "preuninstall": "node scripts.js preuninstall"
   },
   "dependencies": {
     "download": "^8.0.0",
