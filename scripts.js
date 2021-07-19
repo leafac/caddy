@@ -7,9 +7,7 @@ const download = require("download");
   const projectRoot = path.resolve(__dirname, "../../../");
   switch (process.argv[2]) {
     case "postinstall":
-      let version;
-      const package = path.join(projectRoot, "package.json");
-      if (fs.existsSync(package)) version = require(package).caddy;
+      let version = require(path.join(projectRoot, "package.json")).caddy;
       if (version === undefined)
         version = (
           await got(
