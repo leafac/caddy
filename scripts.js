@@ -4,10 +4,9 @@ const got = require("got");
 const download = require("download");
 
 (async () => {
-  const projectRoot = path.resolve(__dirname, "../../../");
   switch (process.argv[2]) {
     case "postinstall":
-      let version = require(path.join(projectRoot, "package.json")).caddy;
+      let version = require("./package.json").caddy;
       if (version === undefined)
         version = (
           await got(
@@ -23,7 +22,7 @@ const download = require("download");
             ? `v${process.config.variables.arm_version}`
             : ""
         }.${process.platform === "win32" ? ".zip" : "tar.gz"}`,
-        path.join(projectRoot, "node_modules/.bin/"),
+        "node_modules/.bin/",
         {
           extract: true,
           filter: (file) => file.path.includes("caddy"),
@@ -32,7 +31,7 @@ const download = require("download");
       break;
 
     case "preuninstall":
-      await fs.unlink(path.join(projectRoot, "node_modules/.bin/caddy"));
+      await fs.unlink("node_modules/.bin/caddy");
       break;
   }
 })();
