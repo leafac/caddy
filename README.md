@@ -1,0 +1,1 @@
+<!-- Inspired by https://github.com/RecuencoJones/caddy-npm, but supports any version of Caddy. -->
