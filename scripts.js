@@ -33,6 +33,7 @@ const download = require("download");
 
     case "preuninstall":
       await fs.unlink(path.join(project, "node_modules/.bin/caddy"));
+      await fs.unlink(path.join(project, "node_modules/.bin/caddy.exe"));
       break;
   }
 })();
