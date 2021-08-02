@@ -22,7 +22,7 @@ const download = require("download");
           process.arch === "arm"
             ? `v${process.config.variables.arm_version}`
             : ""
-        }.${process.platform === "win32" ? ".zip" : "tar.gz"}`,
+        }.${process.platform === "win32" ? "zip" : "tar.gz"}`,
         path.join(project, "node_modules/.bin/"),
         {
           extract: true,
