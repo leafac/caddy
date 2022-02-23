@@ -1,7 +1,7 @@
-const fs = require("fs/promises");
-const path = require("path");
-const got = require("got");
-const download = require("download");
+import fs from "node:fs/promises";
+import path from "node:path";
+import got from "got";
+import download from "download";
 
 (async () => {
   const project = path.resolve("../../../");
