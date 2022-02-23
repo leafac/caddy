@@ -7,7 +7,7 @@ npx @leafac/caddy file-server
 
 
 npm i @leafac/caddy
-./node_modules/.bin/caddy    (npx caddy worked in macOS but not Windows)
+npx caddy (didn’t work on Windows, had to do .\node_modules\.bin\caddy)
 
 
   "caddy": "2.4.5", on package.json
