@@ -1,12 +1,16 @@
 import fs from "node:fs/promises";
+import path from "node:path";
 import got from "got";
 import download from "download";
 
+const directory = process.cwd().split(/[\\/]node_modules[\\/]/)[0];
 switch (process.argv[2]) {
   case "postinstall":
     let version;
     try {
-      version = JSON.parse(await fs.readFile("package.json", "utf-8")).caddy;
+      version = JSON.parse(
+        await fs.readFile(path.join(directory, "package.json"), "utf-8")
+      ).caddy;
     } catch {}
     if (version === undefined)
       version = (
@@ -21,7 +25,7 @@ switch (process.argv[2]) {
       }_${{ x64: "amd64", arm64: "arm64", arm: "arm" }[process.arch]}${
         process.arch === "arm" ? `v${process.config.variables.arm_version}` : ""
       }.${process.platform === "win32" ? "zip" : "tar.gz"}`,
-      "node_modules/.bin/",
+      path.join(directory, "node_modules/.bin/"),
       {
         extract: true,
         filter: (file) => file.path.includes("caddy"),
@@ -31,7 +35,10 @@ switch (process.argv[2]) {
 
   case "preuninstall":
     await fs.unlink(
-      `node_modules/.bin/caddy${process.platform === "win32" ? ".exe" : ""}`
+      path.join(
+        directory,
+        `node_modules/.bin/caddy${process.platform === "win32" ? ".exe" : ""}`
+      )
     );
     break;
 }
