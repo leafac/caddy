@@ -12,6 +12,11 @@
   "license": "MIT",
   "bugs": "https://github.com/leafac/caddy/issues",
   "homepage": "https://github.com/leafac/caddy#readme",
+  "funding": [
+    "https://patreon.com/leafac",
+    "https://paypal.me/LeandroFacchinettiEU",
+    "https://github.com/sponsors/leafac"
+  ],
   "publishConfig": {
     "access": "public"
   },
