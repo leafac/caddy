@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "Install Caddy easily into any Node.js project",
   "repository": "leafac/caddy",
+  "bin": "caddy",
   "keywords": [
     "caddy",
     "reverse proxy",
