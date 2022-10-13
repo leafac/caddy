@@ -22,7 +22,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "type": "module",
   "scripts": {
     "postinstall": "node scripts.js postinstall",
     "preuninstall": "node scripts.js preuninstall"
