@@ -2,23 +2,23 @@
   "name": "@leafac/caddy",
   "version": "1.0.4",
   "description": "Install Caddy easily into any Node.js project",
+  "author": "Leandro Facchinetti <caddy@leafac.com> (https://leafac.com)",
+  "homepage": "https://github.com/leafac/caddy",
+  "bugs": "https://github.com/leafac/caddy/issues",
   "repository": "leafac/caddy",
-  "bin": "caddy",
+  "license": "MIT",
   "keywords": [
     "caddy",
     "reverse proxy",
     "file server"
   ],
-  "author": "Leandro Facchinetti <caddy@leafac.com> (https://leafac.com)",
-  "license": "MIT",
-  "bugs": "https://github.com/leafac/caddy/issues",
-  "homepage": "https://github.com/leafac/caddy",
   "funding": [
     "https://patreon.com/leafac",
     "https://paypal.me/LeandroFacchinettiEU",
     "https://github.com/sponsors/leafac",
     "https://btc.com/34KJBgtaFYMtDqpSgMayw9qiKWg2GQXA9M"
   ],
+  "bin": "caddy",
   "publishConfig": {
     "access": "public"
   },
