@@ -23,8 +23,8 @@
     "access": "public"
   },
   "scripts": {
-    "postinstall": "node scripts.js postinstall",
-    "preuninstall": "node scripts.js preuninstall"
+    "postinstall": "node scripts.mjs postinstall",
+    "preuninstall": "node scripts.mjs preuninstall"
   },
   "dependencies": {
     "download": "^8.0.0",
