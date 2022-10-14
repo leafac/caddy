@@ -1,6 +1,6 @@
 {
   "name": "@leafac/caddy",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Install Caddy easily into any Node.js project",
   "author": "Leandro Facchinetti <caddy@leafac.com> (https://leafac.com)",
   "homepage": "https://github.com/leafac/caddy",
