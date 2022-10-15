@@ -8,8 +8,8 @@
     "file server"
   ],
   "homepage": "https://github.com/leafac/caddy",
+  "repository": "https://github.com/leafac/caddy",
   "bugs": "https://github.com/leafac/caddy/issues",
-  "repository": "leafac/caddy",
   "funding": [
     "https://patreon.com/leafac",
     "https://paypal.me/LeandroFacchinettiEU",
