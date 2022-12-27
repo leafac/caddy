@@ -34,7 +34,7 @@ switch (process.argv[2]) {
     break;
 
   case "preuninstall":
-    await fs.unlink(
+    await fs.rm(
       path.join(
         directory,
         `node_modules/.bin/caddy${process.platform === "win32" ? ".exe" : ""}`
